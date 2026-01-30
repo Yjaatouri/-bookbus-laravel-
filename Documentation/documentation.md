@@ -436,6 +436,8 @@ Méthodes :
 
 * getVilles();
 
+Justification du choix de Laravel pour ce projet :
+
 Le framework Laravel a été choisi pour le développement de la plateforme de réservation en raison de ses nombreux avantages techniques et pratiques.
 
 1. Rapidité de développement
