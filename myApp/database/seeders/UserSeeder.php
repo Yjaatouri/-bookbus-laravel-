@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'phone' => '+212612345678',
         ]);
 
-     
+
 
         // Créer 10 clients
         User::factory(10)->client()->create();
