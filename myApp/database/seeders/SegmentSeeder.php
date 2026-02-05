@@ -12,10 +12,10 @@ class SegmentSeeder extends Seeder
     public function run(): void
     {
         $programmes = Programme::all();
-        
+
         foreach ($programmes as $programme) {
-            $etapes = Etape::where('route_id', $programme->route_id)->get();
-            
+            $etapes = Etape::where('route_id', $programme->route_id)->orderBy('ordre')->get();
+
             if ($etapes->count() >= 2) {
                 // Créer plusieurs segments pour chaque programme
                 for ($i = 0; $i < $etapes->count() - 1; $i++) {

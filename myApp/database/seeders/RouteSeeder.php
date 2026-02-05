@@ -31,6 +31,26 @@ class RouteSeeder extends Seeder
         ]);
 
         // Ajouter 2 routes supplémentaires
+        // Create specific SATAS routes
+        $routeDirect = Route::updateOrCreate(
+            ['nom_route' => 'Casablanca - Marrakech (Direct)'],
+            [
+                'ville_depart' => 'Casablanca',
+                'ville_arrivee' => 'Marrakech',
+                'description' => 'Ligne directe SATAS Casablanca vers Marrakech',
+            ]
+        );
+
+        $routeIndirect = Route::updateOrCreate(
+            ['nom_route' => 'Casablanca - Marrakech (via Rabat)'],
+            [
+                'ville_depart' => 'Casablanca',
+                'ville_arrivee' => 'Marrakech',
+                'description' => 'Ligne SATAS Casablanca vers Marrakech via Rabat',
+            ]
+        );
+
+        // Add other random routes
         Route::factory(2)->create();
     }
 }

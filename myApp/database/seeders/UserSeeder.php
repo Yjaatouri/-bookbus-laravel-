@@ -11,13 +11,16 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // Créer un admin
-        User::create([
-            'name' => 'Admin System',
-            'email' => 'admin@buscompany.com',
-            'password' => Hash::make('admin123'),
-            'role' => 'admin',
-            'phone' => '+212612345678',
-        ]);
+        // Créer un admin
+        User::firstOrCreate(
+            ['email' => 'admin@buscompany.com'],
+            [
+                'name' => 'Admin System',
+                'password' => Hash::make('admin123'),
+                'role' => 'admin',
+                'phone' => '+212612345678',
+            ]
+        );
 
 
 
