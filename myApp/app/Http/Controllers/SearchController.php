@@ -80,7 +80,7 @@ class SearchController extends Controller
 
             return [
                 'route' => $route,
-                'departure_time' => $route->programmes->first()->heure_arrivee ?? '08:00', // Simplified
+                'departure_time' => $route->programmes->first()?->heure_arrivee ?? '08:00', // Simplified
                 'price' => $price,
                 'duration' => ($segmentsCount * 2) . 'h 00m', // Simplified
                 'from_station' => $etapeFrom->nom_etape,

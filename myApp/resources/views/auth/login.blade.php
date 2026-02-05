@@ -42,8 +42,8 @@
             </form>
 
             <div class="text-center mt-4" style="font-size: 0.875rem; color: var(--text-muted);">
-                Don't have an account? <a href="#"
-                    style="color: var(--primary); text-decoration: none; font-weight: 600;">Contact Support</a>
+                Don't have an account? <a href="{{ route('register') }}"
+                    style="color: var(--primary); text-decoration: none; font-weight: 600;">Register</a>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@
     <div class="container animate-fade-in">
         <div class="text-center mt-4" style="margin-bottom: 3rem;">
             <h2>Trips from {{ $from }} to {{ $to }}</h2>
-            <p style="color: var(--text-muted);">{{ \Carbon\Carbon::parse($date)->format('l, F j, Y') }}</p>
+            <p style="color: var(--text-muted);">{{ \Illuminate\Support\Carbon::parse($date)->format('l, F j, Y') }}</p>
         </div>
 
         @if($results->isEmpty())
